@@ -214,17 +214,19 @@ nav > #menu-toggle a{
 
 }
 
-#img-grid{
+#img-grid img{
     display: grid;
     grid-template-rows: 1fr 1fr 1fr;
     justify-content: center;
     row-gap: 20px;
     grid-gap: 15px;
     padding-bottom:5px;  
-    max-width: 100%;
+    width: 100%;
     height: auto;
 
 }
+
+
 
 
 /* PLAN */
@@ -528,22 +530,22 @@ footer a{
             justify-content: flex-start;
             flex-direction: row;
             }
-    
 
     #img-grid{
-    
-        
-    } 
+        display: flex;
+   
+    }
 
     #img-grid img{
+        display: flex;
+        grid-column: 3 / span 2;
+
+        
+       
+    }
+            
     
 
-
-
-
-
-
-    }
 
     #plan div{
         padding: 1rem;  
@@ -572,12 +574,64 @@ footer a{
         flex-direction: row;
     }
 
+    footer{
+         display: flex;
+         flex-direction: row;
+         display: flex;
+        justify-content: space-between;
+         
+    }
+
 
 
     
 
 }
 /* LARGE */ 
-@media screen and (min-width: 1200px){
+@media screen and (min-width: 1000px){
+
+    #intro{
+        display: flex;
+        flex-direction: row;
+    }
+    
+    #intro h2, #intro p{
+        display: flex;
+        flex-direction: row;
+        flex-grow: 1;
+        
+    }
+
+
+    #img-grid{
+        display: flex;
+        justify-content: flex-start;
+        
+   
+    }
+
+    #plan div{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        column-gap: 20px;
+        justify-content: center;
+    }
+
+    #testimonials div{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        column-gap: 20px;
+    }
+
+    #nums{
+        display: flex;
+        flex-direction: column;
+    }
+
+    footer p{
+        display: flex;
+        flex-grow: 1;
+    }
+
     
 }
