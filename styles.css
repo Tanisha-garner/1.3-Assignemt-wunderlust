@@ -172,6 +172,8 @@ nav #menu-toggle{
 
 nav > #menu-toggle a{
     text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
     color: var(--white);
     
 
@@ -217,15 +219,11 @@ nav > #menu-toggle a{
     grid-template-rows: 1fr 1fr 1fr;
     justify-content: center;
     row-gap: 20px;
-    padding-bottom:5px;
-    
-    
-}
-
-#img-grid img {
-    object-fit: cover;
-    width: 100%;
+    grid-gap: 15px;
+    padding-bottom:5px;  
+    max-width: 100%;
     height: auto;
+
 }
 
 
@@ -363,6 +361,10 @@ nav > #menu-toggle a{
     padding-left: 2rem;
 }
 
+#about h3{
+    padding-bottom: 3rem;
+
+}
 /* CONTACT FORM */ 
 
 #contact{
@@ -513,10 +515,69 @@ footer a{
 /* MEDIA QUERIES DOR DIFFERENT SCREEN SIZES */ 
 
 /* SMALL */ 
+@media screen and (min-width: 320px){
+
+}
 
 
 
 /* MEDIUM */ 
+@media screen and (min-width: 750px){
+    header{
+            display: flex;
+            justify-content: flex-start;
+            flex-direction: row;
+            }
+    
+
+    #img-grid{
+    
+        
+    } 
+
+    #img-grid img{
+    
 
 
+
+
+
+
+    }
+
+    #plan div{
+        padding: 1rem;  
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        column-gap: 20px;
+    }
+
+    #testimonials div{
+        padding: 1rem;  
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        column-gap: 20px;
+    }
+
+    #about div{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    #contact fieldset{
+        display: flex;
+        flex-direction: row;
+    }
+
+
+
+    
+
+}
 /* LARGE */ 
+@media screen and (min-width: 1200px){
+    
+}
