@@ -111,22 +111,92 @@ header{
     padding: 10px;
     background-image: linear-gradient(#55BCD5, #FFFFFF);
     display: flex;
-	justify-content: center;
-	flex-direction: column;
+    flex-wrap: wrap;
+    flex-direction: column;
 	padding: 1rem 0;
+   
+    
 }
 
 header h1, header p{
-    padding-left: 60px;
+    padding-left: 1rem;
+    padding-bottom: 3px;
+    display: flex;
+    order: 1;
 }
+
+
+#logo{
+    display: flex;
+    flex-shrink: 3;
+}
+
+nav{
+    display: flex;
+    align-self: flex-end;
+}
+
+
+#toggle{
+    display: none;
+}
+
+#toggle:checked + label + ul {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--teal);
+    color: var(--white);
+    padding: 2rem;
+}
+
+nav #menu-toggle{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+       
+}
+
+#menu-toggle > label{
+    color: var(--dark-gray);
+    background-color: var(--yellow);
+    cursor: pointer;
+    padding: 20px 55px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+}
+
+nav > #menu-toggle a{
+    text-decoration: none;
+    color: var(--white);
+    
+
+}
+
+
+#menu-toggle ul{
+    display: none;
+    padding: 1rem;
+}
+
+
+
+
+
 
 
 
 
 /* INTRO */
 
-#intro{
-    
+#intro div{
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 3rem;
 }
 
 #intro p{
@@ -134,6 +204,8 @@ header h1, header p{
 }
 
 #intro h2, #intro p{
+    display: flex;
+    justify-content: flex-start;
     padding-left: 60px;
     padding: 10px;
 
@@ -145,7 +217,7 @@ header h1, header p{
     grid-template-rows: 1fr 1fr 1fr;
     justify-content: center;
     row-gap: 20px;
-    padding-bottom: 30px;
+    padding-bottom:5px;
     
     
 }
@@ -153,9 +225,7 @@ header h1, header p{
 #img-grid img {
     object-fit: cover;
     width: 100%;
-    height: 100%;
-    
-     
+    height: auto;
 }
 
 
@@ -163,8 +233,9 @@ header h1, header p{
 
 #plan{
     background-color: var(--yellow);
-    padding: 2rem;
+    padding: 1rem;
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
@@ -177,16 +248,14 @@ header h1, header p{
 }
 
 #plan div{
-    padding: 1rem; 
-    
-   
+    padding: 1rem;  
+    display: grid;
+    row-gap: 20px;
 }
     
 
-
 #plan section{
     display: flex;
-    padding: 10px;
     flex-direction: column;
     justify-content: center;  
 }
@@ -206,7 +275,7 @@ header h1, header p{
     border-radius: 15px;
     border-top-width: 3rem;
     border:5px solid var(--white);
-    row-gap: 20px;
+    
 
 }
 
@@ -224,6 +293,7 @@ header h1, header p{
 #testimonials{
     padding: 2rem;
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
@@ -267,23 +337,186 @@ header h1, header p{
     background-color: var(--blue);
     padding: 2rem;
     display: flex;
-    padding: 2rem;
+    flex-wrap: wrap;
     flex-direction: column;
     align-items: center;
-    justify-content: space-around;
+    
+    
 }
 #about div{
     display: grid;
     grid-template-rows: 1fr 1fr;
     grid-template-columns: 1fr 1fr;
-    grid-gap: 25px;
+    grid-gap: 25px;   
+}
+
+#about div > section h4{
+    padding-left: 35px;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#about div > section p{
+    padding-left: 2rem;
+}
+
+/* CONTACT FORM */ 
+
+#contact{
+    padding: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#contact h3{
+    padding-bottom: 2rem;
+}
+
+#contact span{
+    padding-left: 5px;
+    font-family: Montserrat;
+    font-size: medium;
+}
+
+.required{
+    color: var(--purple);
     
+}
+
+#names input{
+    width: 100%;
+    height: 1rem;
+    border-color: var(--purple);
+    border-width: 3px;
+}
+
+#nums input{
+    width: 100%;
+    height: 1rem;
+    border-color: var(--purple);
+    border-width: 3px;
+}
+
+#mySubmit{
+    width: 100%;
+    height: 3rem;
+}
+
+#destination, #travelTime{
+    border-color: var(--purple);
+    border-width: 2px;
+    width: 123%;
+}
+
+
+label{
+    text-transform: uppercase;
+	display: block;
+	margin-bottom: 0.5rem;
+	font-weight: bold;
+}
+
+input, select{
+	display: block;
+	width: 100%;
+	margin-bottom: 2rem;
+	padding: 1rem;
+	height: 3rem;
+}
+
+fieldset{
+	margin: 1rem auto;
+	display: flex;
+    flex-direction: column;
+    text-transform: uppercase;
+    
+}
+
+legend{
+	font-weight: bold;
+	flex-grow: 1;
+}
+
+fieldset label, fieldset input{
+    display: flex;
+    align-items: flex-end;
+	margin: 0.75rem 0;
+	color: var(--dark-gray);
+	font-weight: normal;
+}
+
+fieldset label{
+	display: flex;
+	justify-content: flex-start;
 
 }
 
-#about div > section{
+fieldset input{
+	height: 1rem;
+	display: flex;
+	justify-content: start;
+	
+}
+ input[type='radio']{
+    width: 3em; 
+    height: 3em; 
+    accent-color: var(--purple);
+}
 
-    
-  }
 
-  
+
+input[type=submit]{
+	display: flex;
+    justify-content: center;
+	color: white;
+	font-weight: bold;
+	font-size: 1.15rem;
+	background-color: var(--purple);
+	padding: 0.5rem;
+	width: 100%;
+}
+
+
+
+
+
+
+/* FOOTER STYLES */ 
+
+footer{
+    background-color: var(--light-gray);
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+footer p{
+    text-align: center;
+    padding-bottom: 2rem;
+}
+
+footer a{
+    text-align: center;
+    padding: 8px;
+    text-decoration: none;
+}
+
+
+
+
+/* MEDIA QUERIES DOR DIFFERENT SCREEN SIZES */ 
+
+/* SMALL */ 
+
+
+
+/* MEDIUM */ 
+
+
+/* LARGE */ 
